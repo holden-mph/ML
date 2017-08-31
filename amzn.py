@@ -85,7 +85,7 @@ for t_idx in range(len(sheetnames)):
                       columns = ['AMZN SD VOD', 'AMZN HD VOD', 
                                  'AMZN SD EST', 'AMZN HD EST'])
     
-    df_dict[territory] = pd.concat([df,prices,pd.DataFrame(pdp_list,columns='URL')], axis=1)
+    df_dict[territory] = pd.concat([df,prices,pd.DataFrame(pdp_list,columns=['URL'])], axis=1)
 
 end = time.time()
 print('Scrape finished in',round((end-start)/60,2),'minutes.')
