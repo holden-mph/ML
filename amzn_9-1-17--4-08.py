@@ -7,6 +7,9 @@ import time
 
 start = time.time()
 
+wait_min = 5
+wait_max = 8
+
 ifilename = 'Itunes ALL Territories _ New Release Title Competitive Price Match Initiative (Global).xlsx'
 sheetnames = ['de_DE','en_GB','en_US']
 df_list = [pd.read_excel(ifilename, sheetname=sheetnames[i]) for i in range(len(sheetnames))]
@@ -55,7 +58,7 @@ def scrape(queries):
     header = {'User-Agent': "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:20.0) Gecko/20100101 Firefox/20.0"}
     query = BeautifulSoup((requests.get(queries[i],headers=header)).text, 'lxml')
     print('First query successful')
-    time.sleep(np.random.randint(5,8) * (np.random.rand(1,1) + 0.5))
+    time.sleep(np.random.randint(wait_min,wait_max) * (np.random.rand(1,1) + 0.5))
     pdp_href = query.find('li', {'id': 'result_0', 'class': 's-result-item celwidget '}).find('a', {'class': 'a-link-normal a-text-normal'})['href']
     print('pdp_href line executed successfully')
     pdp_href = pdp_href.split('ref')[0]
@@ -96,7 +99,7 @@ def scrape(queries):
     print('filling in np arrays successful')
     
     pdp_list.append(pdp_href)
-    time.sleep(np.random.randint(5,8) * (np.random.rand(1,1) + 0.5))
+    time.sleep(np.random.randint(wait_min,wait_max) * (np.random.rand(1,1) + 0.5))
       
 ######################################################################
 
