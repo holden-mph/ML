@@ -10,7 +10,7 @@ start = time.time()
 wait_min = 5
 wait_max = 8
 
-ifilename = 'Itunes ALL Territories _ New Release Title Competitive Price Match Initiative (Global).xlsx'
+ifilename = 'filename.xlsx'
 sheetnames = ['de_DE','en_GB','en_US']
 df_list = [pd.read_excel(ifilename, sheetname=sheetnames[i]) for i in range(len(sheetnames))]
 
