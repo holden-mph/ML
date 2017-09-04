@@ -139,7 +139,7 @@ for t_idx in range(len(sheetnames)):
     prices = pd.DataFrame(np.concatenate((sd_vod, hd_vod, sd_est, hd_est), axis=1), 
                       columns = ['AMZN SD VOD', 'AMZN HD VOD', 
                                  'AMZN SD EST', 'AMZN HD EST'])
-    df_dict[territory] = pd.concat([df,prices,pd.DataFrame(pdp_list,columns=['URL'])], axis=1).replace([0], [None])
+    df_dict[territory] = pd.concat([df,prices,pd.DataFrame(pdp_list,columns=['URL'])], axis=1).replace([0], ['null'])
     
 ######################################################################
 
