@@ -37,7 +37,7 @@ def editTitleNames(col):
     local = col
     
     unwanted_chars = ":!,-?().®'"
-    unwanted_expressions = ['PS Plus Exclusive Discount', 'Pre Order', 'PreOrder']
+    unwanted_expressions = ['P##P##S Exclusive Discount', 'Pre Order', 'PreOrder']
     
     for char in unwanted_chars:
         local = local.replace(char,'')
@@ -91,7 +91,7 @@ def scrape(queries):
             elif 'HD' in split:
                 hd_est[i] = sort_split(split)
                 
-    print('NumPy arrays filled in for i = ',i)
+    print('NumPy arrays filled in for i =',i)
     
     pdp_list.append(pdp_href)
     time.sleep(np.random.randint(wait_min,wait_max) * (np.random.rand(1,1) + 0.5))
