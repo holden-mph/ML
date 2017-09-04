@@ -102,7 +102,7 @@ def scrape(queries):
 ################################ MAIN ################################
     
 for t_idx in range(len(sheetnames)):
-    print('Scraping Amazon.{}'.format(territory_domains[t_idx]))
+    print('\nScraping Amazon.{}'.format(territory_domains[t_idx]))
 
     df = df_list[t_idx]
 
