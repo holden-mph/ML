@@ -3,14 +3,6 @@ class KMeans(object):
         self.k = n_clusters
         self.centroid_coords_tracker = []
         
-    def final_plot(data):
-        plt.figure(figsize=(10,6))
-        colours = ['g','b','r','y','c']
-        results = [data[data['cluster_label']==i] for i in range(k)]
-        for i in range(self.k):
-            plt.scatter(data[i].iloc[:,0], data[i].iloc[:,1], c = colours[i])
-        plt.show()
-    
     def fit_predict(self, X):
         self.X = X
         
