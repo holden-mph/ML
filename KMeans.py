@@ -2,9 +2,6 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
-#uncomment line below if using jupyter notebook
-#%matplotlib inline 
-
 from sklearn.datasets import make_blobs
 
 k = 4
