@@ -5,8 +5,6 @@ import tensorflow as tf
 import matplotlib.pyplot as plt
 %matplotlib inline
 
-from sklearn.model_selection import train_test_split
-
 Nclass = 500
 
 X1 = np.random.randn(Nclass,2) + np.array([-2,2])
